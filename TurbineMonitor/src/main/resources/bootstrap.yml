@@ -1,0 +1,15 @@
+---
+spring:
+  application:
+    name: TURBINEMONITOR
+  cloud:
+    config:
+      discovery:
+        enabled: false
+
+eureka:
+  instance:
+    nonSecurePort: ${server.port:8989}
+  client:
+    serviceUrl:
+      defaultZone: http://10.14.148.23:8761/eureka/,http://10.14.148.23:8762/eureka/

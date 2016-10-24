@@ -1,0 +1,14 @@
+---
+server:
+  port: 8989
+
+
+turbine:
+  aggregator:
+    clusterConfig: AVAILABILITYSERVICES
+  appConfig: AVAILABILITYSERVICES
+  instanceInsertPort: 
+    default : false
+  combineHostPort : true
+logging:
+  level: INFO

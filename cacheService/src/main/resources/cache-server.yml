@@ -1,0 +1,28 @@
+# Spring properties
+spring:
+  thymeleaf:
+     check-template:false
+     enabled:false	
+     mode:HTML5
+  application:
+     name: cache-service
+
+# Discovery Server Access
+eureka:
+  instance:
+      metadataMap:
+        instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      leaseRenewalIntervalInSeconds: 1
+      leaseExpirationDurationInSeconds: 2
+      
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# HTTP Server
+server:
+  port: 2222   # HTTP (Tomcat) port
+  
+ 

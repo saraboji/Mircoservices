@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mirza
+      changes:
+        - createTable:
+            tableName: CART_DETAILS
+            columns:
+              - column:
+                  name: entryId
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userid
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: item
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: itemValue
+                  type: FLOAT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: isCheckedOut
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                
+                    
+                    
+                    
+  - changeSet:
+      id: 2
+      author: mirza
+      changes:
+        - insert:
+            tableName: CART_DETAILS
+            columns:
+              - column:
+                  name: userid
+                  value: s728304
+              - column:
+                  name: item
+                  value: item1
+              - column:
+                  name: itemValue
+                  value: 1.24
+              - column:
+                  name: isCheckedOut
+                  value: false

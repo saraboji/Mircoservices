@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: BOOKINGHOSTSERVICES
+  data:
+    mongodb:
+      port: 27017 
+server:
+  port: 7311
+
+eureka:
+  password: password
+  client:
+    serviceUrl:
+      defaultZone: http://10.14.148.23:8761/eureka/,http://10.14.148.23:8762/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}

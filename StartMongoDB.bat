@@ -1,0 +1,1 @@
+call "C:\RD\workspace\testarea\mongodb-win32-x86_64-v3.0-latest\mongodb-win32-x86_64-3.0.12-61-gd2e92e8\bin\mongod.exe" --dbpath "C:\RD\workspace\testarea\mongodb-win32-x86_64-v3.0-latest\mongodb-win32-x86_64-3.0.12-61-gd2e92e8\data"
